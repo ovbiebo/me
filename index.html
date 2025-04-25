@@ -1,30 +1,85 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
-</head>
-<body>
-<main class="mx-auto min-h-full w-full max-w-[42rem] py-10">
-    <section class="mx-auto flex flex-col items-center space-y-8">
-        <div class="flex flex-col space-y-4 text-center">
-            <h2 class="mx-auto my-2 max-w-md">Chidubem Ovbiebo</h2>
-            <h3 class="mx-auto max-w-sm text-neutral-500 md:text-lg">
-                Software Engineer based in Lagos, Nigeria
-            </h3>
-        </div>
-        <div class="mx-auto mt-12 flex max-w-xs flex-col items-center space-y-4 text-center" x-data="count">
-            <button x-on:click="count++" class="btn" type="button">
-                count is <span x-text="count"></span>
-            </button>
-            <p class="text-xs text-neutral-500 max-w-[18rem]">
-                More info coming soon!
-            </p>
-        </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Sedgwick+Ave&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="mx-auto min-h-full w-full max-w-[38rem]">
+    <section class="mx-auto flex flex-col items-center space-y-8 min-h-screen">
+      <div class="flex-1 flex flex-col space-y-4 text-center justify-center">
+        <h2 class="font-display my-36 md:text-5xl text-3xl">
+          Who is<br /><span class="md:text-7xl text-4xl font-inter uppercase"
+            >Chidubem Ovbiebo</span
+          >?
+        </h2>
+      </div>
+      <p class="text-neutral-500 text-center">
+        Chidubem is a software engineer who enjoys building clean APIs, fast
+        systems, and tools that (ideally) don’t break in the middle of the
+        night. He works mostly on backend services and infrastructure, and
+        occasionally gets dragged into frontend work—with minimal complaining.
+      </p>
     </section>
-</main>
-<script type="module" src="/src/main.ts"></script>
-</body>
+    <section>
+      <div class="mt-36 text-center flex flex-col" x-data="posts">
+        <h2 class="font-display">
+          Does he share any
+          <span class="font-inter font-semibold text-5xl uppercase"
+            >articles</span
+          >
+          online?
+        </h2>
+        <p class="text-neutral-500 mb-12">
+          Occassionally. Lately, he’s been writing about distributed systems.
+          Recent posts include deep dives into logical clocks, and synchronizing
+          distributed systems.
+        </p>
+        <template x-for="post in posts">
+          <div class="flex justify-between gap-4 border-t last:border-b">
+            <a
+              class="my-4 truncate"
+              target="_blank"
+              x-bind:href="post.url"
+              x-text="post.name"
+            ></a>
+            <p class="text-neutral-500 font-light" x-text="post.date"></p>
+          </div>
+        </template>
+      </div>
+    </section>
+    <section class="py-48">
+      <h2 class="text-center font-display">
+        How can people
+        <span class="font-inter font-semibold text-5xl uppercase">contact</span>
+        him?
+      </h2>
+      <ul
+        class="flex flex-wrap justify-center items-center text-neutral-500 list-none"
+      >
+        <li class="mx-2 my-1">
+          <a href="mailto:chidubemovbiebo@gmail.com" target="_blank"> Email </a>
+        </li>
+        <li class="mx-2 my-1">
+          <a href="https://www.linkedin.com/in/chidubemovbiebo" target="_blank">
+            LinkedIn
+          </a>
+        </li>
+        <li class="mx-2 my-1">
+          <a href="https://github.com/ovbiebo" target="_blank"> Github </a>
+        </li>
+        <li class="mx-2 my-1">
+          <a href="https://twitter.com/chdubm" target="_blank"> Twitter </a>
+        </li>
+      </ul>
+    </section>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>

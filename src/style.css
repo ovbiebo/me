@@ -3,6 +3,8 @@
 @theme {
   --color-primary: oklch(0.269 0 0);
   --color-secondary: oklch(0.922 0 0);
+  --font-display: "Sedgwick Ave", cursive;
+  --font-inter: "Inter Tight", sans-serif;
 }
 
 @utility btn {
@@ -25,23 +27,23 @@
   }
 
   h2 {
-    @apply text-2xl mb-4 mt-8 px-6 font-semibold tracking-tight md:text-3xl;
+    @apply text-2xl mb-4 mt-8 px-6 font-medium tracking-tight md:text-3xl;
   }
 
   h3 {
-    @apply text-xl mb-4 mt-6 px-6 font-semibold tracking-tight md:text-2xl;
+    @apply text-xl mb-4 mt-6 px-6 font-medium tracking-tight md:text-2xl;
   }
 
   h4 {
-    @apply text-lg mb-4 mt-6 px-6 font-semibold tracking-tight md:text-xl;
+    @apply text-lg mb-4 mt-6 px-6 font-medium tracking-tight md:text-xl;
   }
 
   h5 {
-    @apply text-base mb-4 mt-6 px-6 font-semibold tracking-tight md:text-lg;
+    @apply text-base mb-4 mt-6 px-6 font-medium tracking-tight md:text-lg;
   }
 
   h6 {
-    @apply text-sm mb-4 mt-6 px-6 font-semibold tracking-tight md:text-base;
+    @apply text-sm mb-4 mt-6 px-6 font-medium tracking-tight md:text-base;
   }
 
   ul {
@@ -56,6 +58,10 @@
     @apply my-2;
   }
 
+  a {
+    @apply hover:underline;
+  }
+
   input,
   textarea,
   select {
@@ -63,7 +69,7 @@
   }
 
   p {
-    @apply my-4 px-6;
+    @apply my-4;
   }
 
   pre {
