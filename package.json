@@ -7,10 +7,12 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "format": "prettier --write .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@types/alpinejs": "^3.13.11",
+    "husky": "^9.1.7",
     "prettier": "^3.5.3",
     "typescript": "~5.7.2",
     "vite": "^6.3.1"
