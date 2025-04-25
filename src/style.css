@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: oklch(0.269 0 0);
+  --color-secondary: oklch(0.922 0 0);
+}
+
+@utility btn {
+  @apply flex gap-2 cursor-pointer items-center rounded-full bg-primary disabled:bg-neutral-300 px-8 py-2 text-white hover:bg-black focus:outline-none;
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@layer components {
+  * {
+    text-rendering: optimizeLegibility;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1 {
+    @apply text-3xl mb-6 mt-8 px-6 tracking-tight md:text-4xl font-semibold;
+  }
+
+  h2 {
+    @apply text-2xl mb-4 mt-8 px-6 font-semibold tracking-tight md:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl mb-4 mt-6 px-6 font-semibold tracking-tight md:text-2xl;
+  }
+
+  h4 {
+    @apply text-lg mb-4 mt-6 px-6 font-semibold tracking-tight md:text-xl;
+  }
+
+  h5 {
+    @apply text-base mb-4 mt-6 px-6 font-semibold tracking-tight md:text-lg;
+  }
+
+  h6 {
+    @apply text-sm mb-4 mt-6 px-6 font-semibold tracking-tight md:text-base;
+  }
+
+  ul {
+    @apply my-4 px-6 list-disc list-inside;
+  }
+
+  ol {
+    @apply my-4 px-6 list-decimal list-inside;
+  }
+
+  li {
+    @apply my-2;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply relative w-full px-3 py-2 resize-none rounded-md border border-primary text-sm focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300/75;
+  }
+
+  p {
+    @apply my-4 px-6;
+  }
+
+  pre {
+    @apply whitespace-pre-wrap bg-gray-500 rounded-md p-2.5;
+  }
+
+  :not(pre) > code {
+    @apply font-mono bg-secondary dark:bg-neutral-600 rounded-sm;
+  }
+
+  blockquote {
+    @apply border-l-[3px] border-black dark:border-secondary text-2xl px-6 my-12 font-semibold;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white border border-primary text-primary hover:bg-neutral-100;
+  }
+
+  .btn-icon {
+    @apply flex cursor-pointer rounded-md justify-center items-center size-8 bg-white dark:bg-black text-neutral-300 dark:text-neutral-600 hover:border hover:border-neutral-300 dark:hover:border-neutral-600 focus:outline-none;
+  }
+
+  .chip {
+    @apply px-3 py-2 resize-none rounded-md border border-secondary text-sm text-primary font-medium hover:bg-neutral-50 cursor-pointer whitespace-nowrap;
+  }
+}

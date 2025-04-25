@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vite + TS</title>
+</head>
+<body>
+<main class="mx-auto min-h-full w-full max-w-[42rem] py-10">
+    <section class="mx-auto flex flex-col items-center space-y-8">
+        <div class="flex flex-col space-y-4 text-center">
+            <h2 class="mx-auto my-2 max-w-md">Chidubem Ovbiebo</h2>
+            <h3 class="mx-auto max-w-sm text-neutral-500 md:text-lg">
+                Software Engineer based in Lagos, Nigeria
+            </h3>
+        </div>
+        <div class="mx-auto mt-12 flex max-w-xs flex-col items-center space-y-4 text-center" x-data="count">
+            <button x-on:click="count++" class="btn" type="button">
+                count is <span x-text="count"></span>
+            </button>
+            <p class="text-xs text-neutral-500 max-w-[18rem]">
+                More info coming soon!
+            </p>
+        </div>
+    </section>
+</main>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
